@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>React + API — SmartLearn</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #27ae60, #000000);
+      color: white;
+      padding: 40px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(60px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      color: #b6ffb4;
+      margin-bottom: 30px;
+    }
+
+    .content {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 800px;
+      margin: 0 auto;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+    }
+
+    .content h2 {
+      color: #66ffcc;
+      font-size: 24px;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    pre {
+      background: #111;
+      color: #4aff83;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+    }
+
+    .btn-back {
+      display: inline-block;
+      margin-top: 30px;
+      background-color: #27ae60;
+      padding: 10px 20px;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn-back:hover {
+      background-color: #1e8449;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>React + API Kursi</h1>
+
+  <div class="content">
+    <h2>Loyiha: Foydalanuvchi ro‘yxatini API orqali yuklash</h2>
+    <p>Bu darsda siz Fetch API yordamida tashqi API'dan ma'lumot olib, uni sahifada chiqarishni o‘rganasiz:</p>
+
+    <pre>
+import React, { useEffect, useState } from 'react';
+
+function Users() {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(res => res.json())
+      .then(data => setUsers(data));
+  }, []);
+
+  return (
+    &lt;div&gt;
+      &lt;h3&gt;Foydalanuvchilar&lt;/h3&gt;
+      &lt;ul&gt;
+        {users.map(user =&gt; (
+          &lt;li key={user.id}&gt;{user.name} ({user.email})&lt;/li&gt;
+        ))}
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  );
+}
+    </pre>
+
+    <a href="course.html" class="btn-back">⬅ Kurslar sahifasiga qaytish</a>
+  </div>
+
+</body>
+</html>

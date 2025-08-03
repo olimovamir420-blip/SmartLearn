@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fullstack Web — SmartLearn</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #27ae60, #000000);
+      color: white;
+      padding: 40px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      color: #b6ffb4;
+      margin-bottom: 30px;
+    }
+
+    .content {
+      background: rgba(0, 0, 0, 0.65);
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 800px;
+      margin: 0 auto;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+    }
+
+    .content h2 {
+      color: #66ffcc;
+      font-size: 24px;
+    }
+
+    .content p, ul {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    pre {
+      background: #111;
+      color: #4aff83;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+    }
+
+    .btn-back {
+      display: inline-block;
+      margin-top: 30px;
+      background-color: #27ae60;
+      padding: 10px 20px;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn-back:hover {
+      background-color: #1e8449;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Fullstack Web Kursi</h1>
+
+  <div class="content">
+    <h2>Loyiha: Portfolio Web Ilova</h2>
+    <p>Bu kursda siz quyidagi texnologiyalarni birlashtirib to‘liq web ilova yaratishni o‘rganasiz:</p>
+
+    <ul>
+      <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
+      <li><strong>Backend:</strong> Node.js, Express.js</li>
+      <li><strong>Database:</strong> MongoDB</li>
+    </ul>
+
+    <pre>
+// Misol: Express.js server
+const express = require('express');
+const app = express();
+app.get('/', (req, res) => {
+  res.send('Salom, bu Fullstack Web!');
+});
+app.listen(3000, () => console.log("Server 3000-portda ishlamoqda"));
+    </pre>
+
+    <a href="course.html" class="btn-back">⬅ </a>
+  </div>
+
+</body>
+</html>
