@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Node.js Backend — SmartLearn</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: linear-gradient(135deg, #000000, #14532d);
+      color: white;
+    }
+
+    h1, h2, h3 {
+      color: #4CAF50;
+    }
+
+    code {
+      background-color: #222;
+      color: #b6ffb4;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    pre {
+      background-color: #111;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    a {
+      color: #6fe56f;
+    }
+
+    hr {
+      margin: 40px 0;
+      border: 1px solid #4CAF50;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 60px;
+    }
+
+    .button {
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #27ae60;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 #4CAF50; }
+      70% { transform: scale(1.05); box-shadow: 0 0 10px 5px #4CAF50; }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 #4CAF50; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Node.js va Express.js bilan Backend</h1>
+
+  <p>Bu darslikda siz <strong>Node.js</strong> va <strong>Express.js</strong> yordamida backend (orqa tizim) dasturlashni o‘rganasiz.</p>
+
+  <hr/>
+
+  <h2>1. Node.js Kirish</h2>
+  <p>Node.js — bu JavaScript yordamida server tomonda dastur yozish imkonini beruvchi platformadir.</p>
+
+  <h3>Oddiy HTTP server yaratish:</h3>
+<pre><code>const http = require("http");
+
+const server = http.createServer((req, res) => {
+  res.write("Salom, dunyo!");
+  res.end();
+});
+
+server.listen(3000, () => {
+  console.log("Server 3000-portda ishga tushdi.");
+});</code></pre>
+
+  <hr/>
+
+  <h2>2. Express.js bilan ishlash</h2>
+  <p>Express.js — Node.js asosidagi eng mashhur frameworklardan biridir.</p>
+
+<pre><code>const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("Bosh sahifa");
+});
+
+app.get("/about", (req, res) => {
+  res.send("Biz haqimizda sahifasi");
+});
+
+app.listen(3000, () => {
+  console.log("Express server 3000-portda ishlayapti.");
+});</code></pre>
+
+  <hr/>
+
+  <h2>3. REST API yaratish</h2>
+<pre><code>const express = require("express");
+const app = express();
+app.use(express.json());
+
+let users = [];
+
+app.post("/users", (req, res) => {
+  users.push(req.body);
+  res.send("Foydalanuvchi qo‘shildi");
+});
+
+app.get("/users", (req, res) => {
+  res.json(users);
+});
+
+app.listen(3000);</code></pre>
+
+  <p>Bu API orqali siz foydalanuvchilarni qo‘shishingiz va ro‘yxatini olishingiz mumkin.</p>
+
+  <hr/>
+
+  <h2>4. Amaliy Mashq</h2>
+  <ul>
+    <li>Node.js o‘rnatib, oddiy server yarating</li>
+    <li>Express yordamida sahifalar qo‘shing</li>
+    <li>POST va GET so‘rovlar bilan REST API yozing</li>
+  </ul>
+
+  <p>Agar bularni bajargan bo‘lsangiz — siz backend dasturlashga kirishdingiz! 🚀</p>
+
+  <div class="btn-container">
+    <a href="course.html" class="button">← Kurslarga qaytish</a>
+    <a href="mongo.html" class="button">Keyingi darslik →</a>
+  </div>
+
+</body>
+</html>

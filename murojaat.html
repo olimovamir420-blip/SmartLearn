@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartLearn — Murojaat qilish</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: white;
+      background: linear-gradient(-45deg, #000000, #14532d, #000000, #27ae60);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .section-card {
+      padding: 40px 20px;
+      margin: 60px auto 30px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-top: 2px solid #4CAF50;
+      border-bottom: 2px solid #4CAF50;
+      box-shadow: 0 0 20px #4CAF50;
+      max-width: 700px;
+      border-radius: 12px;
+    }
+
+    .section-card h2 {
+      color: #b6ffb4;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .section-card ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .section-card ul li {
+      margin: 10px 0;
+    }
+
+    .section-card form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .section-card input,
+    .section-card textarea {
+      padding: 12px;
+      background-color: #222;
+      border: none;
+      color: white;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .section-card button {
+      padding: 12px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .section-card button:hover {
+      background-color: #43a047;
+    }
+
+    .back-button {
+  display: block;
+  width: fit-content;
+  margin: 30px auto 0;
+  padding: 12px 24px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+
+    .back-button:hover {
+      background-color: #388e3c;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <section id="contact" class="section-card">
+    <h2>Murojaat qilish</h2>
+    <ul>
+      <li><strong>Manzil:</strong> Buxoro, Ma'rifat ko‘chasi, 1-uy</li>
+      <li><strong>Telefon:</strong> +998 93 150 38 05</li>
+      <li><strong>Email:</strong> info@smartlearn.uz</li>
+    </ul>
+   <form action="#" method="POST" onsubmit="alert('Yuborildi!'); return false;">
+
+      <input type="text" name="name" placeholder="Ismingiz" required />
+      <input type="email" name="email" placeholder="Emailingiz" required />
+      <textarea name="message" rows="4" placeholder="Murojaat matni" required></textarea>
+      <button type="submit">Yuborish</button>
+    </form>
+
+    <a href="courses.html" class="back-button">🏠 Bosh sahifaga qaytish</a>
+  </section>
+
+ <footer>
+  © 2025 SmartLearn — MirAmir tomonidan yaratilgan.
+</footer>
+
+
+</body>
+</html>

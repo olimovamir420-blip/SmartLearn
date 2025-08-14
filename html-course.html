@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Asoslari — SmartLearn</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: linear-gradient(135deg, #000000, #14532d);
+      color: white;
+    }
+
+    h1, h2, h3 {
+      color: #4CAF50;
+    }
+
+    code {
+      background-color: #222;
+      color: #b6ffb4;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    pre {
+      background-color: #111;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    a {
+      color: #6fe56f;
+      text-decoration: none;
+    }
+
+    hr {
+      margin: 40px 0;
+      border: 1px solid #4CAF50;
+    }
+
+    .navigation-buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 60px;
+      padding: 20px;
+      background-color: #0d0d0d;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #27ae60;
+    }
+
+    .navigation-buttons a {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #27ae60;
+      border-radius: 8px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 #4CAF50; }
+      70% { transform: scale(1.05); box-shadow: 0 0 10px 5px #4CAF50; }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 #4CAF50; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>HTML Asoslari</h1>
+
+  <p><strong>HTML</strong> — bu veb sahifalarning asosiy tuzilmasini yaratish uchun ishlatiladigan dasturlash tilidir. HTML (HyperText Markup Language) yordamida siz sahifadagi matn, rasm, havola, jadval va boshqa elementlarni joylashtirasiz.</p>
+
+  <hr/>
+
+  <h2>1. HTML Hujjatining Tuzilishi</h2>
+  <p>Har bir HTML fayl quyidagi asosiy qismlardan iborat bo‘ladi:</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="uz"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt>Mening Birinchi Sahifam&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Salom, dunyo!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+  <p><strong>Izoh:</strong> <code>&lt;!DOCTYPE html&gt;</code> bu brauzerga HTML5 formatida yozilganligini bildiradi.</p>
+
+  <hr/>
+
+  <h2>2. Asosiy Teglar</h2>
+  <ul>
+    <li><code>&lt;h1&gt; ... &lt;/h1&gt;</code> — Sarlavha (eng katta)</li>
+    <li><code>&lt;p&gt; ... &lt;/p&gt;</code> — Paragraf</li>
+    <li><code>&lt;a href="..."&gt; ... &lt;/a&gt;</code> — Havola</li>
+    <li><code>&lt;img src="..." alt="..."&gt;</code> — Rasm</li>
+    <li><code>&lt;ul&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ul&gt;</code> — Ro‘yxat</li>
+  </ul>
+
+  <hr/>
+
+  <h2>3. Rasm Qo‘shish</h2>
+  <p>Rasm qo‘shish uchun <code>&lt;img&gt;</code> tegi ishlatiladi:</p>
+
+<pre><code>&lt;img src="rasm.jpg" alt="Bu yerda rasm bor"&gt;
+</code></pre>
+
+  <hr/>
+
+  <h2>4. Havolalar (Links)</h2>
+  <p>Sahifalar orasida o‘tish uchun <code>&lt;a&gt;</code> tegi ishlatiladi:</p>
+
+<pre><code>&lt;a href="https://smartlearn.uz"&gt;SmartLearn sayti&lt;/a&gt;
+</code></pre>
+
+  <hr/>
+
+  <h2>5. Jadval yaratish</h2>
+
+<pre><code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Ism&lt;/th&gt;
+    &lt;th&gt;Familiya&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Ali&lt;/td&gt;
+    &lt;td&gt;Valiyev&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+
+  <hr/>
+
+  <h2>6. Formalar</h2>
+  <p>Foydalanuvchidan ma’lumot olish uchun formalar ishlatiladi:</p>
+
+<pre><code>&lt;form&gt;
+  Ismingiz: &lt;input type="text" name="ism"&gt;&lt;br&gt;
+  Yuborish: &lt;input type="submit" value="Jo‘natish"&gt;
+&lt;/form&gt;
+</code></pre>
+
+  <hr/>
+
+  <h2>7. Amaliy Mashq</h2>
+  <p>Quyidagilarni yaratishga harakat qiling:</p>
+  <ul>
+    <li>Sahifada sarlavha, rasm va paragraflar</li>
+    <li>HTML ro‘yxat va jadval</li>
+    <li>Formani qo‘shing va uni to‘ldiring</li>
+  </ul>
+
+  <p>Agar bularni muvaffaqiyatli bajargan bo‘lsangiz — siz HTML asoslarini o‘zlashtirdingiz! 🎉</p>
+
+  <div class="navigation-buttons">
+    <a href="course.html" class="back-button">← Kurslarga qaytish</a>
+    <a href="css-course.html" class="next-button">➡️ Keyingi darslikka o‘tish</a>
+  </div>
+
+</body>
+</html>

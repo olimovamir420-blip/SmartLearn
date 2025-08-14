@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartLearn — Test sinovlari</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #000000, #27ae60);
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .test-section {
+      display: block;
+      margin-top: 20px;
+      padding: 20px;
+      background: rgba(0, 255, 0, 0.08);
+      border: 1px solid #27ae60;
+      border-radius: 10px;
+      margin-bottom: 40px;
+    }
+    .question {
+      margin-bottom: 20px;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 15px;
+      border-radius: 8px;
+    }
+    .option {
+      margin: 5px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    select, button {
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px auto;
+      display: block;
+    }
+    label {
+      font-weight: bold;
+      margin-bottom: 10px;
+      display: block;
+    }
+    input[type="radio"] {
+      transform: scale(1.2);
+    }
+    #result {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>12 ta kurs uchun testlar</h1>
+
+  <!-- HAR BIR TEST SECTIONNING H2 nomlarini siz bergan kurslar bilan to‘g‘rilayman -->
+  <!-- HTML, CSS, JavaScript, Python Asoslari, OOP Python, Ma’lumotlar bilan ishlash, Node.js Backend, MongoDB, Fullstack Web, React Asoslari, React Router, React + API -->
+
+  <!-- HTML -->
+<div class="test-section">
+  <h2>HTML Asoslari</h2>
+  <div class="question">
+    <label>1. HTML nima?</label>
+    <div class="option"><input type="radio" name="html1"> A) Dasturlash tili</div>
+    <div class="option"><input type="radio" name="html1"> B) Belgilash tili</div>
+    <div class="option"><input type="radio" name="html1"> C) Server tili</div>
+  </div>
+  <div class="question">
+    <label>2. HTML fayl kengaytmasi qanday?</label>
+    <div class="option"><input type="radio" name="html2"> A) .doc</div>
+    <div class="option"><input type="radio" name="html2"> B) .html</div>
+    <div class="option"><input type="radio" name="html2"> C) .exe</div>
+  </div>
+  <div class="question">
+    <label>3. < title > tegi nima uchun kerak?</label>
+    <div class="option"><input type="radio" name="html3"> A) Jadval chizish uchun</div>
+    <div class="option"><input type="radio" name="html3"> B) Sahifa sarlavhasi uchun</div>
+    <div class="option"><input type="radio" name="html3"> C) Matn rangini o‘zgartirish uchun</div>
+  </div>
+  <div class="question">
+    <label>4. HTML da < a > tegi nima uchun kerak?</label>
+    <div class="option"><input type="radio" name="html4"> A) Rasm joylash</div>
+    <div class="option"><input type="radio" name="html4"> B) Havola berish</div>
+    <div class="option"><input type="radio" name="html4"> C) Jadval yaratish</div>
+  </div>
+  <div class="question">
+    <label>5. HTML kodlari qayerda bajariladi?</label>
+    <div class="option"><input type="radio" name="html5"> A) Brauzerda</div>
+    <div class="option"><input type="radio" name="html5"> B) Serverda</div>
+    <div class="option"><input type="radio" name="html5"> C) Konsolda</div>
+  </div>
+</div>
+
+<!-- CSS -->
+<div class="test-section">
+  <h2>CSS Dizayn</h2>
+  <div class="question">
+    <label>1. CSS nima uchun ishlatiladi?</label>
+    <div class="option"><input type="radio" name="css1"> A) Server bilan ishlash</div>
+    <div class="option"><input type="radio" name="css1"> B) Veb sahifani bezash</div>
+    <div class="option"><input type="radio" name="css1"> C) Ma’lumot bazasi yaratish</div>
+  </div>
+  <div class="question">
+    <label>2. CSS fayl kengaytmasi qanday?</label>
+    <div class="option"><input type="radio" name="css2"> A) .cs</div>
+    <div class="option"><input type="radio" name="css2"> B) .css</div>
+    <div class="option"><input type="radio" name="css2"> C) .style</div>
+  </div>
+  <div class="question">
+    <label>3. Qaysi tegi bilan CSS ulanadi?</label>
+    <div class="option"><input type="radio" name="css3"> A) < style ></div>
+    <div class="option"><input type="radio" name="css3"> B) < script ></div>
+    <div class="option"><input type="radio" name="css3"> C) < head ></div>
+  </div>
+  <div class="question">
+    <label>4. "color" xossasi nima uchun kerak?</label>
+    <div class="option"><input type="radio" name="css4"> A) Orqa fonni belgilash</div>
+    <div class="option"><input type="radio" name="css4"> B) Matn rangini o‘zgartirish</div>
+    <div class="option"><input type="radio" name="css4"> C) Qator oralig‘ini belgilash</div>
+  </div>
+  <div class="question">
+    <label>5. CSS da "margin" nima?</label>
+    <div class="option"><input type="radio" name="css5"> A) Matn hajmi</div>
+    <div class="option"><input type="radio" name="css5"> B) Tashqi bo‘sh joy</div>
+    <div class="option"><input type="radio" name="css5"> C) Ichki bo‘sh joy</div>
+  </div>
+</div>
+
+<!-- JavaScript -->
+<div class="test-section">
+  <h2>JavaScript Kirish</h2>
+  <div class="question">
+    <label>1. JavaScript nima uchun ishlatiladi?</label>
+    <div class="option"><input type="radio" name="js1"> A) Statik sahifa yaratish</div>
+    <div class="option"><input type="radio" name="js1"> B) Sahifaga dinamiklik berish</div>
+    <div class="option"><input type="radio" name="js1"> C) Server bilan bog‘lanish</div>
+  </div>
+  <div class="question">
+    <label>2. JavaScript fayli qanday ulanadi?</label>
+    <div class="option"><input type="radio" name="js2"> A) < script src="..." ></div>
+    <div class="option"><input type="radio" name="js2"> B) < style src="..." ></div>
+    <div class="option"><input type="radio" name="js2"> C) < link src="..." ></div>
+  </div>
+  <div class="question">
+    <label>3. Qaysi biri to‘g‘ri o‘zgaruvchi eloni?</label>
+    <div class="option"><input type="radio" name="js3"> A) var = x 10;</div>
+    <div class="option"><input type="radio" name="js3"> B) let x = 10;</div>
+    <div class="option"><input type="radio" name="js3"> C) const: x = 10;</div>
+  </div>
+  <div class="question">
+    <label>4. "alert()" funksiyasi nima qiladi?</label>
+    <div class="option"><input type="radio" name="js4"> A) Ma’lumot kiritadi</div>
+    <div class="option"><input type="radio" name="js4"> B) Ekranga xabar chiqaradi</div>
+    <div class="option"><input type="radio" name="js4"> C) Ma’lumotni o‘chiradi</div>
+  </div>
+  <div class="question">
+    <label>5. Qanday operator tenglikni tekshiradi?</label>
+    <div class="option"><input type="radio" name="js5"> A) =</div>
+    <div class="option"><input type="radio" name="js5"> B) ==</div>
+    <div class="option"><input type="radio" name="js5"> C) ===</div>
+  </div>
+</div>
+
+<!-- Python Asoslari -->
+<div class="test-section">
+  <h2>Python Asoslari</h2>
+  <div class="question">
+    <label>1. Python qanday til?</label>
+    <div class="option"><input type="radio" name="py1"> A) Dasturlash tili</div>
+    <div class="option"><input type="radio" name="py1"> B) Belgilash tili</div>
+    <div class="option"><input type="radio" name="py1"> C) Operatsion tizim</div>
+  </div>
+  <div class="question">
+    <label>2. Qaysi biri o‘zgaruvchi e’lon qilish?</label>
+    <div class="option"><input type="radio" name="py2"> A) let x = 10</div>
+    <div class="option"><input type="radio" name="py2"> B) x := 10</div>
+    <div class="option"><input type="radio" name="py2"> C) x = 10</div>
+  </div>
+  <div class="question">
+    <label>3. "if" operatori nima uchun kerak?</label>
+    <div class="option"><input type="radio" name="py3"> A) Takrorlash</div>
+    <div class="option"><input type="radio" name="py3"> B) Shart tekshirish</div>
+    <div class="option"><input type="radio" name="py3"> C) Funksiya yaratish</div>
+  </div>
+  <div class="question">
+    <label>4. Qaysi biri sikl operatori?</label>
+    <div class="option"><input type="radio" name="py4"> A) for</div>
+    <div class="option"><input type="radio" name="py4"> B) def</div>
+    <div class="option"><input type="radio" name="py4"> C) return</div>
+  </div>
+  <div class="question">
+    <label>5. print("Salom") nima qiladi?</label>
+    <div class="option"><input type="radio" name="py5"> A) Ma’lumot kiritadi</div>
+    <div class="option"><input type="radio" name="py5"> B) Ekranga chiqaradi</div>
+    <div class="option"><input type="radio" name="py5"> C) O‘chiradi</div>
+  </div>
+</div>
+
+<!-- OOP Python -->
+<div class="test-section">
+  <h2>OOP Python</h2>
+  <div class="question">
+    <label>1. OOP nimani anglatadi?</label>
+    <div class="option"><input type="radio" name="oop1"> A) Object-Oriented Programming</div>
+    <div class="option"><input type="radio" name="oop1"> B) Online Operational Process</div>
+    <div class="option"><input type="radio" name="oop1"> C) Only One Python</div>
+  </div>
+  <div class="question">
+    <label>2. Class nima?</label>
+    <div class="option"><input type="radio" name="oop2"> A) Funksiya</div>
+    <div class="option"><input type="radio" name="oop2"> B) Ma’lumotlar strukturasi</div>
+    <div class="option"><input type="radio" name="oop2"> C) Ob'ekt shabloni</div>
+  </div>
+  <div class="question">
+    <label>3. Qaysi kalit so‘z bilan class yaratiladi?</label>
+    <div class="option"><input type="radio" name="oop3"> A) object</div>
+    <div class="option"><input type="radio" name="oop3"> B) class</div>
+    <div class="option"><input type="radio" name="oop3"> C) def</div>
+  </div>
+  <div class="question">
+    <label>4. Ob’ekt nima?</label>
+    <div class="option"><input type="radio" name="oop4"> A) Funksiya</div>
+    <div class="option"><input type="radio" name="oop4"> B) Classdan olingan nusxa</div>
+    <div class="option"><input type="radio" name="oop4"> C) String qiymat</div>
+  </div>
+  <div class="question">
+    <label>5. self parametri nima?</label>
+    <div class="option"><input type="radio" name="oop5"> A) Tashqi o‘zgaruvchi</div>
+    <div class="option"><input type="radio" name="oop5"> B) O‘zining ob’ekti</div>
+    <div class="option"><input type="radio" name="oop5"> C) Global funksiya</div>
+  </div>
+</div>
+
+<!-- Ma’lumotlar bilan ishlash -->
+<div class="test-section">
+  <h2>Ma’lumotlar bilan ishlash</h2>
+  <div class="question">
+    <label>1. JSON nima?</label>
+    <div class="option"><input type="radio" name="data1"> A) Ma’lumotlar bazasi</div>
+    <div class="option"><input type="radio" name="data1"> B) Ma’lumot almashish formati</div>
+    <div class="option"><input type="radio" name="data1"> C) API server</div>
+  </div>
+  <div class="question">
+    <label>2. Python-da faylni o‘qish funksiyasi?</label>
+    <div class="option"><input type="radio" name="data2"> A) read()</div>
+    <div class="option"><input type="radio" name="data2"> B) get()</div>
+    <div class="option"><input type="radio" name="data2"> C) fetch()</div>
+  </div>
+  <div class="question">
+    <label>3. SQLite nima?</label>
+    <div class="option"><input type="radio" name="data3"> A) Server tili</div>
+    <div class="option"><input type="radio" name="data3"> B) Engil ma’lumotlar bazasi</div>
+    <div class="option"><input type="radio" name="data3"> C) HTTP protokol</div>
+  </div>
+  <div class="question">
+    <label>4. JSON fayl kengaytmasi?</label>
+    <div class="option"><input type="radio" name="data4"> A) .txt</div>
+    <div class="option"><input type="radio" name="data4"> B) .json</div>
+    <div class="option"><input type="radio" name="data4"> C) .xml</div>
+  </div>
+  <div class="question">
+    <label>5. Faylni yopish uchun qaysi metod?</label>
+    <div class="option"><input type="radio" name="data5"> A) .close()</div>
+    <div class="option"><input type="radio" name="data5"> B) .exit()</div>
+    <div class="option"><input type="radio" name="data5"> C) .stop()</div>
+  </div>
+</div>
+
+<!-- Node.js Backend -->
+<div class="test-section">
+  <h2>Node.js Backend</h2>
+  <div class="question">
+    <label>1. Node.js nima?</label>
+    <div class="option"><input type="radio" name="node1"> A) Frontend kutubxonasi</div>
+    <div class="option"><input type="radio" name="node1"> B) JavaScript runtime muhiti</div>
+    <div class="option"><input type="radio" name="node1"> C) Ma'lumotlar bazasi</div>
+  </div>
+  <div class="question">
+    <label>2. Express.js nima?</label>
+    <div class="option"><input type="radio" name="node2"> A) CSS framework</div>
+    <div class="option"><input type="radio" name="node2"> B) Node.js uchun backend framework</div>
+    <div class="option"><input type="radio" name="node2"> C) Grafik kutubxona</div>
+  </div>
+  <div class="question">
+    <label>3. API nima?</label>
+    <div class="option"><input type="radio" name="node3"> A) Mobil ilova</div>
+    <div class="option"><input type="radio" name="node3"> B) Ma’lumotlar almashish interfeysi</div>
+    <div class="option"><input type="radio" name="node3"> C) Web sahifa dizayni</div>
+  </div>
+  <div class="question">
+    <label>4. Middleware nima?</label>
+    <div class="option"><input type="radio" name="node4"> A) Web brauzer</div>
+    <div class="option"><input type="radio" name="node4"> B) Serverga kelgan so‘rovni qayta ishlovchi funksiya</div>
+    <div class="option"><input type="radio" name="node4"> C) Ma'lumotlar bazasi</div>
+  </div>
+  <div class="question">
+    <label>5. Nodemon nima qiladi?</label>
+    <div class="option"><input type="radio" name="node5"> A) Serverni avtomatik qayta ishga tushiradi</div>
+    <div class="option"><input type="radio" name="node5"> B) Web sahifa yaratadi</div>
+    <div class="option"><input type="radio" name="node5"> C) CSS fayllarni uyg‘unlashtiradi</div>
+  </div>
+</div>
+
+<!-- MongoDB -->
+<div class="test-section">
+  <h2>MongoDB</h2>
+  <div class="question">
+    <label>1. MongoDB qanday turdagi ma’lumotlar bazasi?</label>
+    <div class="option"><input type="radio" name="mongo1"> A) Relatsion</div>
+    <div class="option"><input type="radio" name="mongo1"> B) NoSQL</div>
+    <div class="option"><input type="radio" name="mongo1"> C) XML</div>
+  </div>
+  <div class="question">
+    <label>2. Qaysi formatda saqlanadi?</label>
+    <div class="option"><input type="radio" name="mongo2"> A) JSON</div>
+    <div class="option"><input type="radio" name="mongo2"> B) CSV</div>
+    <div class="option"><input type="radio" name="mongo2"> C) TXT</div>
+  </div>
+  <div class="question">
+    <label>3. CRUD nima degani?</label>
+    <div class="option"><input type="radio" name="mongo3"> A) Create, Read, Update, Delete</div>
+    <div class="option"><input type="radio" name="mongo3"> B) Connect, Run, Upload, Download</div>
+    <div class="option"><input type="radio" name="mongo3"> C) Call, Refresh, Use, Debug</div>
+  </div>
+  <div class="question">
+    <label>4. Mongo shell bu...</label>
+    <div class="option"><input type="radio" name="mongo4"> A) MongoDB uchun grafik interfeys</div>
+    <div class="option"><input type="radio" name="mongo4"> B) Buyruqlarni yozish interfeysi</div>
+    <div class="option"><input type="radio" name="mongo4"> C) Web sahifa</div>
+  </div>
+  <div class="question">
+    <label>5. Qanday portda ishlaydi (default)?</label>
+    <div class="option"><input type="radio" name="mongo5"> A) 3000</div>
+    <div class="option"><input type="radio" name="mongo5"> B) 27017</div>
+    <div class="option"><input type="radio" name="mongo5"> C) 8080</div>
+  </div>
+</div>
+
+<!-- Fullstack Web -->
+<div class="test-section">
+  <h2>Fullstack Web</h2>
+  <div class="question">
+    <label>1. Fullstack degani nima?</label>
+    <div class="option"><input type="radio" name="fs1"> A) Faqat frontend</div>
+    <div class="option"><input type="radio" name="fs1"> B) Frontend + Backend</div>
+    <div class="option"><input type="radio" name="fs1"> C) Faqat backend</div>
+  </div>
+  <div class="question">
+    <label>2. Fullstack uchun qanday texnologiyalar kerak?</label>
+    <div class="option"><input type="radio" name="fs2"> A) HTML, CSS, JS</div>
+    <div class="option"><input type="radio" name="fs2"> B) Faqat CSS</div>
+    <div class="option"><input type="radio" name="fs2"> C) Git</div>
+  </div>
+  <div class="question">
+    <label>3. Node.js backendda nima vazifani bajaradi?</label>
+    <div class="option"><input type="radio" name="fs3"> A) Foydalanuvchi interfeysi</div>
+    <div class="option"><input type="radio" name="fs3"> B) Server logikasi</div>
+    <div class="option"><input type="radio" name="fs3"> C) CSS animatsiya</div>
+  </div>
+  <div class="question">
+    <label>4. MongoDB nima uchun kerak?</label>
+    <div class="option"><input type="radio" name="fs4"> A) Ma’lumotlarni saqlash</div>
+    <div class="option"><input type="radio" name="fs4"> B) Sahifani bezash</div>
+    <div class="option"><input type="radio" name="fs4"> C) Navigatsiya yaratish</div>
+  </div>
+  <div class="question">
+    <label>5. React nima vazifa bajaradi?</label>
+    <div class="option"><input type="radio" name="fs5"> A) Backend yaratadi</div>
+    <div class="option"><input type="radio" name="fs5"> B) SPA frontend kutubxonasi</div>
+    <div class="option"><input type="radio" name="fs5"> C) SQL bazasini boshqaradi</div>
+  </div>
+</div>
+
+<!-- React Asoslari -->
+<div class="test-section">
+  <h2>React Asoslari</h2>
+  <div class="question">
+    <label>1. React kutubxonasi kim tomonidan yaratilgan?</label>
+    <div class="option"><input type="radio" name="r1"> A) Google</div>
+    <div class="option"><input type="radio" name="r1"> B) Facebook</div>
+    <div class="option"><input type="radio" name="r1"> C) Microsoft</div>
+  </div>
+  <div class="question">
+    <label>2. JSX nima?</label>
+    <div class="option"><input type="radio" name="r2"> A) CSS sintaksisi</div>
+    <div class="option"><input type="radio" name="r2"> B) JavaScript + HTML</div>
+    <div class="option"><input type="radio" name="r2"> C) JSON fayl</div>
+  </div>
+  <div class="question">
+    <label>3. useState nima uchun kerak?</label>
+    <div class="option"><input type="radio" name="r3"> A) Serverga ulanish</div>
+    <div class="option"><input type="radio" name="r3"> B) Komponent holatini boshqarish</div>
+    <div class="option"><input type="radio" name="r3"> C) Routingni sozlash</div>
+  </div>
+  <div class="question">
+    <label>4. Component nima?</label>
+    <div class="option"><input type="radio" name="r4"> A) CSS fayl</div>
+    <div class="option"><input type="radio" name="r4"> B) Qayta ishlatiladigan UI blok</div>
+    <div class="option"><input type="radio" name="r4"> C) Router element</div>
+  </div>
+  <div class="question">
+    <label>5. Props nima?</label>
+    <div class="option"><input type="radio" name="r5"> A) Componentlar orasida ma’lumot uzatish</div>
+    <div class="option"><input type="radio" name="r5"> B) CSS xossasi</div>
+    <div class="option"><input type="radio" name="r5"> C) JavaScript operatori</div>
+  </div>
+</div>
+
+<!-- Davomi qo‘shilmoqda... -->
+
+  <!-- End of all test sections -->
+  <!-- End of all test sections -->
+<button class="submit-btn" onclick="checkAnswers()">✅ Testni tekshirish</button>
+<div id="result"></div>
+
+<a href="index.html" class="back-button">🏠 Bosh sahifaga qaytish</a>
+
+<footer>
+  © 2025 — SmartLearn MirAmir tomonidan yaratilgan.
+</footer>
+
+<style>
+  .submit-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(to right, #2ecc71, #27ae60);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    display: block;
+    margin: 30px auto 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: background 0.3s ease;
+  }
+
+  .submit-btn:hover {
+    background: linear-gradient(to right, #27ae60, #1e8449);
+  }
+
+  .back-button {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 40px;
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease;
+    text-align: center;
+  }
+
+  .back-button:hover {
+    background-color: #388e3c;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #ccc;
+  }
+</style>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>React Router — SmartLearn</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: linear-gradient(135deg, #000000, #14532d);
+      color: white;
+    }
+
+    h1, h2, h3 {
+      color: #4CAF50;
+    }
+
+    code {
+      background-color: #222;
+      color: #b6ffb4;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    pre {
+      background-color: #111;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    a {
+      color: #6fe56f;
+    }
+
+    hr {
+      margin: 40px 0;
+      border: 1px solid #4CAF50;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 60px;
+    }
+
+    .button {
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #27ae60;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 #4CAF50; }
+      70% { transform: scale(1.05); box-shadow: 0 0 10px 5px #4CAF50; }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 #4CAF50; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>React Router</h1>
+
+  <p><strong>React Router</strong> — bu React ilovalarida sahifalar (yo‘nalishlar) o‘rtasida navigatsiya qilish uchun ishlatiladigan kutubxona.</p>
+
+  <hr/>
+
+  <h2>1. O‘rnatish</h2>
+<pre><code>npm install react-router-dom</code></pre>
+
+  <hr/>
+
+  <h2>2. Asosiy tuzilma</h2>
+  <p><code>BrowserRouter</code> bilan ilovani o‘rab olamiz:</p>
+<pre><code>import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+function App() {
+  return (
+    &lt;BrowserRouter&gt;
+      &lt;Routes&gt;
+        &lt;Route path="/" element={&lt;BoshSahifa /&gt;} /&gt;
+        &lt;Route path="/kurslar" element={&lt;Kurslar /&gt;} /&gt;
+      &lt;/Routes&gt;
+    &lt;/BrowserRouter&gt;
+  );
+}</code></pre>
+
+  <hr/>
+
+  <h2>3. Havola qilish</h2>
+<pre><code>import { Link } from 'react-router-dom';
+
+&lt;Link to="/kurslar"&gt;Kurslar sahifasi&lt;/Link&gt;
+</code></pre>
+
+  <hr/>
+
+  <h2>4. useNavigate Hook</h2>
+<pre><code>import { useNavigate } from 'react-router-dom';
+
+const navigate = useNavigate();
+navigate("/kurslar");</code></pre>
+
+  <hr/>
+
+  <h2>5. Amaliy mashq</h2>
+  <ul>
+    <li>3 ta sahifa yarating: Home, About, Contact</li>
+    <li>Har bir sahifani alohida komponentda yozing</li>
+    <li>React Router bilan marshrutlar yarating</li>
+  </ul>
+
+  <p>React Router — SPA (Single Page App) ilovalarning kalitidir! 🌐</p>
+
+  <div class="btn-container">
+    <a href="course.html" class="button">← Kurslarga qaytish</a>
+    <a href="react-api.html" class="button">Keyingi darslik →</a>
+  </div>
+
+</body>
+</html>

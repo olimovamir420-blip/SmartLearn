@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>React + API — SmartLearn</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: linear-gradient(135deg, #000000, #14532d);
+      color: white;
+    }
+
+    h1, h2, h3 {
+      color: #4CAF50;
+    }
+
+    code {
+      background-color: #222;
+      color: #b6ffb4;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    pre {
+      background-color: #111;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    a {
+      color: #6fe56f;
+    }
+
+    hr {
+      margin: 40px 0;
+      border: 1px solid #4CAF50;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 50px;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #27ae60;
+      border: none;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 #4CAF50; }
+      70% { transform: scale(1.05); box-shadow: 0 0 10px 5px #4CAF50; }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 #4CAF50; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>React + API</h1>
+
+  <p><strong>React</strong> ilovalari foydalanuvchiga real va dinamik ma’lumotlarni ko‘rsatish uchun <strong>API</strong> (Application Programming Interface) bilan bog‘lanadi. Ushbu darsda siz REST API’dan ma’lumot olish va uni ekranga chiqarishni o‘rganasiz.</p>
+
+  <hr/>
+
+  <h2>1. Fetch funksiyasi bilan ma’lumot olish</h2>
+  <p>React komponentida API’dan ma’lumot olish uchun <code>useEffect</code> va <code>fetch</code> ishlatiladi:</p>
+
+<pre><code>import { useEffect, useState } from 'react';
+
+function App() {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then(res => res.json())
+      .then(data => setPosts(data));
+  }, []);
+
+  return (
+    &lt;div&gt;
+      &lt;h2&gt;Postlar ro‘yxati&lt;/h2&gt;
+      &lt;ul&gt;
+        {posts.map(post =&gt; (
+          &lt;li key={post.id}&gt;{post.title}&lt;/li&gt;
+        ))}
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+
+  <hr/>
+
+  <h2>2. Axios bilan ishlash</h2>
+  <p><strong>Axios</strong> — API bilan ishlashni osonlashtiruvchi kutubxona.</p>
+
+<pre><code>npm install axios
+</code></pre>
+
+<pre><code>import axios from 'axios';
+
+useEffect(() => {
+  axios.get('https://jsonplaceholder.typicode.com/users')
+    .then(res => setUsers(res.data));
+}, []);
+</code></pre>
+
+  <hr/>
+
+  <h2>3. Yuklanayotgan vaqtni ko‘rsatish</h2>
+  <p>API ma’lumot kelyotganda foydalanuvchiga “Yuklanmoqda...” degan yozuvni ko‘rsatish foydali:</p>
+
+<pre><code>const [loading, setLoading] = useState(true);
+
+useEffect(() => {
+  fetch(...).then(res => res.json())
+    .then(data => {
+      setData(data);
+      setLoading(false);
+    });
+}, []);
+
+return (
+  &lt;div&gt;
+    {loading ? &lt;p&gt;Yuklanmoqda...&lt;/p&gt; : &lt;DataList data={data} /&gt;}
+  &lt;/div&gt;
+);
+</code></pre>
+
+  <hr/>
+
+  <h2>4. Xatolikni tutish (error handling)</h2>
+  <p>Xatolik yuz berganda foydalanuvchiga bildirish uchun <code>try/catch</code> yoki <code>.catch()</code> ishlatiladi:</p>
+
+<pre><code>useEffect(() => {
+  fetch('https://api.example.com/data')
+    .then(res => {
+      if (!res.ok) {
+        throw new Error('Tarmoq xatosi');
+      }
+      return res.json();
+    })
+    .then(data => setData(data))
+    .catch(error => setError(error.message));
+}, []);
+</code></pre>
+
+  <hr/>
+
+  <h2>5. Amaliy loyiha g‘oyasi</h2>
+  <p>API bilan ishlashni mustahkamlash uchun quyidagi loyihani bajaring:</p>
+  <ul>
+    <li>Foydalanuvchilar ro‘yxatini API orqali oling</li>
+    <li>Ularning ismlarini ro‘yxatda chiqaring</li>
+    <li>Yuklanayotgan vaqtni va xatolik holatini ko‘rsating</li>
+  </ul>
+
+  <p>Ushbu amaliyot sizni real React ilova tuzishga tayyorlaydi!</p>
+
+  <a href="course.html" class="back-button">← Kurslarga qaytish</a>
+
+</body>
+</html>

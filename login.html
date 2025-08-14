@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartLearn - Kirish</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <form class="form-box" action="#" method="post" onsubmit="return loginUser(event)">
+      <h2>Kirish</h2>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required placeholder="Email kiriting">
+
+      <label for="password">Parol</label>
+      <input type="password" id="password" name="password" required placeholder="Parolingiz">
+
+      <button type="submit">Kirish</button>
+
+      <p class="switch-link">
+        Hisobingiz yo‘qmi? <a href="register.html">Ro‘yxatdan o‘ting</a>
+      </p>
+    </form>
+  </div>
+
+  <script>
+    function loginUser(e) {
+      e.preventDefault();
+      window.location.href = "courses.html";
+      return false;
+    }
+  </script>
+</body>
+</html>
+
+

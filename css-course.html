@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Asoslari — SmartLearn</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: linear-gradient(135deg, #000000, #14532d);
+      color: white;
+    }
+
+    h1, h2, h3 {
+      color: #4CAF50;
+    }
+
+    code {
+      background-color: #222;
+      color: #b6ffb4;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    pre {
+      background-color: #111;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    a {
+      color: #6fe56f;
+    }
+
+    hr {
+      margin: 40px 0;
+      border: 1px solid #4CAF50;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 60px;
+    }
+
+    .button {
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #27ae60;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 #4CAF50; }
+      70% { transform: scale(1.05); box-shadow: 0 0 10px 5px #4CAF50; }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 #4CAF50; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Asoslari</h1>
+
+  <p><strong>CSS (Cascading Style Sheets)</strong> — bu HTML elementlariga uslub berish uchun ishlatiladi. Rangi, joylashuvi, o‘lchami, oraliqlari kabi xususiyatlarni sozlashga imkon beradi.</p>
+
+  <hr/>
+
+  <h2>1. CSS Uslubni Ulash</h2>
+  <p>3 xil usul mavjud:</p>
+  <ul>
+    <li><strong>Inline</strong> — bevosita teglarda: <code>&lt;p style="color:red;"&gt;</code></li>
+    <li><strong>Internal</strong> — HTML faylining <code>&lt;head&gt;</code> ichida <code>&lt;style&gt;</code> yordamida</li>
+    <li><strong>External</strong> — alohida .css faylga yoziladi va <code>&lt;link rel="stylesheet" href="style.css"&gt;</code> orqali ulanadi</li>
+  </ul>
+
+  <hr/>
+
+  <h2>2. Asosiy Sintaksis</h2>
+<pre><code>p {
+  color: green;
+  font-size: 18px;
+}</code></pre>
+  <p>Bu yerda <code>p</code> — selector, <code>color</code> va <code>font-size</code> esa uslub xossalari.</p>
+
+  <hr/>
+
+  <h2>3. Ranglar va Fonlar</h2>
+  <p>Ranglar HEX, RGB, yoki nom bilan yozilishi mumkin:</p>
+<pre><code>body {
+  background-color: #000;
+  color: white;
+}</code></pre>
+
+  <hr/>
+
+  <h2>4. Box Model (Quti Modeli)</h2>
+  <p>HTML elementlari quyidagi qismlardan iborat:</p>
+  <ul>
+    <li>Content (matn)</li>
+    <li>Padding (ichki oraliq)</li>
+    <li>Border (chegara)</li>
+    <li>Margin (tashqi oraliq)</li>
+  </ul>
+
+  <hr/>
+
+  <h2>5. CSS Selectors</h2>
+  <ul>
+    <li><code>p</code> — barcha paragraf teglar</li>
+    <li><code>.class</code> — class bo‘yicha tanlash</li>
+    <li><code>#id</code> — id bo‘yicha tanlash</li>
+    <li><code>div p</code> — ichidagi elementlar</li>
+  </ul>
+
+  <hr/>
+
+  <h2>6. Amaliy Mashq</h2>
+  <p>Quyidagi mashqlarni bajaring:</p>
+  <ul>
+    <li>Sarlavha va paragrafga rang bering</li>
+    <li>Rasmga border va margin qo‘shing</li>
+    <li>Har xil selectorlar bilan elementlar tanlang</li>
+  </ul>
+
+  <p>Agar bularni bajargan bo‘lsangiz — CSS asoslarini o‘rgandingiz! 🎉</p>
+
+  <div class="btn-container">
+    <a href="course.html" class="button">← Kurslarga qaytish</a>
+    <a href="js-course.html" class="button">Keyingi darslik →</a>
+  </div>
+
+</body>
+</html>

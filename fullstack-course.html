@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fullstack Web — SmartLearn</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: linear-gradient(135deg, #000000, #14532d);
+      color: white;
+    }
+
+    h1, h2, h3 {
+      color: #4CAF50;
+    }
+
+    code {
+      background-color: #222;
+      color: #b6ffb4;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    pre {
+      background-color: #111;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    a {
+      color: #6fe56f;
+    }
+
+    hr {
+      margin: 40px 0;
+      border: 1px solid #4CAF50;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 60px;
+    }
+
+    .button {
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #27ae60;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 #4CAF50; }
+      70% { transform: scale(1.05); box-shadow: 0 0 10px 5px #4CAF50; }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 #4CAF50; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Fullstack Web Dasturlash</h1>
+
+  <p>Bu kursda siz frontend va backend texnologiyalarini birlashtirib, to‘liq ishlovchi web ilovalarni yaratishni o‘rganasiz.</p>
+
+  <hr/>
+
+  <h2>1. Frontend qismlar</h2>
+  <ul>
+    <li><strong>HTML</strong> — tuzilma yaratish</li>
+    <li><strong>CSS</strong> — dizayn va responsive layout</li>
+    <li><strong>JavaScript</strong> — interaktivlik va funksionallik</li>
+  </ul>
+
+  <hr/>
+
+  <h2>2. Backend qismlar</h2>
+  <ul>
+    <li><strong>Node.js</strong> — server logikasi</li>
+    <li><strong>Express.js</strong> — routing va API</li>
+    <li><strong>MongoDB</strong> — ma’lumotlar bazasi</li>
+  </ul>
+
+  <hr/>
+
+  <h2>3. Fullstack ilova tuzish</h2>
+<pre><code>// Frontend: Fetch orqali API chaqirish
+fetch("/api/users")
+  .then(res => res.json())
+  .then(data => console.log(data));
+
+// Backend (Node + Express):
+app.get("/api/users", (req, res) => {
+  res.json([{ name: "Ali" }, { name: "Vali" }]);
+});
+</code></pre>
+
+  <hr/>
+
+  <h2>4. Loyihani tuzish qadamlar</h2>
+  <ol>
+    <li>Frontendni tayyorlang</li>
+    <li>Backend API yozing</li>
+    <li>MongoDB bilan bog‘lang</li>
+    <li>Frontenddan API orqali ma’lumot oling</li>
+    <li>Fullstack deploy qiling (Render, Vercel, Railway va h.k.)</li>
+  </ol>
+
+  <hr/>
+
+  <h2>5. Amaliy topshiriq</h2>
+  <ul>
+    <li>To‘liq "To-Do App" ilovasini yarating</li>
+    <li>Frontend va backendni bog‘lang</li>
+    <li>Mongo orqali CRUD amallarni bajaring</li>
+  </ul>
+
+  <p>Bu kursni muvaffaqiyatli tugatganingizda siz haqiqiy fullstack developer bo‘lasiz! 💻🚀</p>
+
+  <div class="btn-container">
+    <a href="course.html" class="button">← Kurslarga qaytish</a>
+    <a href="react-course.html" class="button">Keyingi darslik →</a>
+  </div>
+
+</body>
+</html>

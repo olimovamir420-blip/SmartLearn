@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <title>MirAmir Timeline | SmartLearn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #1b1b1b;
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 30px 0;
+      color: #4CAF50;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px 0;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background-color: #4CAF50;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+    }
+
+    .container {
+      padding: 15px 30px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+      opacity: 0;
+      transition: all 0.6s ease;
+    }
+
+    .left {
+      left: 0;
+      transform: translateX(-50px);
+    }
+
+    .right {
+      left: 50%;
+      transform: translateX(50px);
+    }
+
+    .container.show.left {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .container.show.right {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .content {
+      padding: 20px;
+      background: linear-gradient(135deg, #1e1e1e, #14532d);
+      position: relative;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      color: #fff;
+    }
+
+    .container::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: #4CAF50;
+      border: 3px solid #1b1b1b;
+      z-index: 1;
+    }
+
+    .left::before {
+      right: -9px;
+    }
+
+    .right::before {
+      left: -9px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 25px;
+      }
+
+      .timeline::after {
+        left: 30px;
+      }
+
+      .left, .right {
+        left: 0;
+        transform: translateX(0);
+      }
+
+      .left::before, .right::before {
+        left: 15px;
+      }
+    }
+
+    /* === Aylanib yuradigan Bosh sahifa tugmasi === */
+    .floating-button-container {
+      position: fixed;
+      top: 20px;
+      right: 40px;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #14532d, #27ae60);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 15px #4CAF50;
+      animation: rotateCircle 5s linear infinite;
+      z-index: 999;
+    }
+
+    .floating-button {
+      text-decoration: none;
+      font-size: 22px;
+      color: white;
+      font-weight: bold;
+    }
+
+    @keyframes rotateCircle {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🟢 Aylanib yuruvchi tugma -->
+  <div class="floating-button-container">
+    <a href="courses.html" class="floating-button" title="Bosh sahifaga qaytish">🏠</a>
+  </div>
+
+  <h1>MirAmir | Fullstack Timeline</h1>
+
+  <div class="timeline">
+    <div class="container left"><div class="content"><strong>Amir Olimov</strong><br>16 yoshlik dasturlovchi</div></div>
+    <div class="container right"><div class="content"><strong>Men o'rgangan tillar Html va Css</strong><br>Qolganlari mana shular</div></div>
+    <div class="container left"><div class="content"><strong>HTML</strong><br>Veb sahifaning skeleti — tuzilmani yaratish uchun.</div></div>
+    <div class="container right"><div class="content"><strong>CSS</strong><br>Sayt dizaynini, rangini, responsivligini belgilaydi.</div></div>
+    <div class="container left"><div class="content"><strong>JavaScript</strong><br>Veb sahifaga jonli interaktiv funksiyalar qo‘shadi.</div></div>
+    <div class="container right"><div class="content"><strong>React</strong><br>Frontendni komponentlarga ajratib boshqarish.</div></div>
+    <div class="container left"><div class="content"><strong>Node.js</strong><br>Server qismini JSda yozish imkonini beradi.</div></div>
+    <div class="container right"><div class="content"><strong>Express.js</strong><br>Node.js bilan marshrut va API yaratish osonlashadi.</div></div>
+    <div class="container left"><div class="content"><strong>MongoDB</strong><br>Ma’lumotlarni JSON hujjatlar sifatida saqlaydi.</div></div>
+    <div class="container right"><div class="content"><strong>Git & GitHub</strong><br>Kodni versiyalar bilan boshqarish, jamoaviy ishlar uchun.</div></div>
+  </div>
+
+  <script>
+    const boxes = document.querySelectorAll('.container');
+
+    boxes.forEach((box, index) => {
+      setTimeout(() => {
+        box.classList.add('show');
+      }, index * 500);
+    });
+  </script>
+
+</body>
+</html>

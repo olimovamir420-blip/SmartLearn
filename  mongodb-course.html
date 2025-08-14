@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MongoDB — SmartLearn</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: linear-gradient(135deg, #000000, #14532d);
+      color: white;
+    }
+
+    h1, h2, h3 {
+      color: #4CAF50;
+    }
+
+    code {
+      background-color: #222;
+      color: #b6ffb4;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    pre {
+      background-color: #111;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    a {
+      color: #6fe56f;
+    }
+
+    hr {
+      margin: 40px 0;
+      border: 1px solid #4CAF50;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 50px;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #27ae60;
+      border: none;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 #4CAF50; }
+      70% { transform: scale(1.05); box-shadow: 0 0 10px 5px #4CAF50; }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 #4CAF50; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>MongoDB Asoslari</h1>
+
+  <p><strong>MongoDB</strong> — bu NoSQL turidagi ma’lumotlar bazasi bo‘lib, hujjat ko‘rinishidagi (JSON-yagona) ma’lumotlar bilan ishlaydi. Mongo juda moslashuvchan va dasturchilar uchun intuitiv interfeysga ega.</p>
+
+  <hr/>
+
+  <h2>1. MongoDB ni o‘rnatish</h2>
+  <p>MongoDB'ni rasmiy saytdan yuklab oling: <a href="https://www.mongodb.com/try/download/community">mongodb.com</a></p>
+
+  <p>Yoki VS Code uchun <strong>MongoDB Extension</strong> orqali ishlatishingiz mumkin.</p>
+
+  <hr/>
+
+  <h2>2. MongoDB Atlas</h2>
+  <p>Agar siz online ishlamoqchi bo‘lsangiz, <a href="https://www.mongodb.com/cloud/atlas">MongoDB Atlas</a> orqali bepul bulutli ma’lumotlar bazasi yaratishingiz mumkin.</p>
+
+  <hr/>
+
+  <h2>3. MongoDB bilan ulanish (Node.js)</h2>
+  <p><code>mongoose</code> paketi orqali MongoDB bilan ulanish:</p>
+
+<pre><code>npm install mongoose</code></pre>
+
+<pre><code>// db.js
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost:27017/mydb')
+  .then(() =&gt; console.log("Ulandi"))
+  .catch(err =&gt; console.log(err));
+</code></pre>
+
+  <hr/>
+
+  <h2>4. Model yaratish</h2>
+<pre><code>const User = mongoose.model('User', {
+  name: String,
+  age: Number,
+  email: String
+});</code></pre>
+
+  <hr/>
+
+  <h2>5. CRUD amallari</h2>
+
+  <h3>Yaratish (Create)</h3>
+<pre><code>const newUser = new User({ name: 'Ali', age: 25, email: 'ali@gmail.com' });
+newUser.save();</code></pre>
+
+  <h3>O‘qish (Read)</h3>
+<pre><code>User.find().then(data =&gt; console.log(data));</code></pre>
+
+  <h3>Yangilash (Update)</h3>
+<pre><code>User.updateOne({ name: 'Ali' }, { age: 30 });</code></pre>
+
+  <h3>O‘chirish (Delete)</h3>
+<pre><code>User.deleteOne({ name: 'Ali' });</code></pre>
+
+  <hr/>
+
+  <h2>6. Mongo Compass</h2>
+  <p>MongoDB ma’lumotlar bazasini vizual ko‘rishda <strong>MongoDB Compass</strong> dasturi foydali bo‘ladi.</p>
+
+  <hr/>
+
+  <h2>7. Amaliy Mashqlar</h2>
+  <ul>
+    <li>Yangi kolleksiya yaratish</li>
+    <li>Foydalanuvchini qo‘shish, yangilash, o‘chirish</li>
+    <li>Postman orqali API va Mongo integratsiyasini test qilish</li>
+  </ul>
+
+  <p>MongoDB yordamida ma’lumotlar bazasi bilan samarali ishlashni o‘rgandingiz! 🎉</p>
+
+  <a href="course.html" class="back-button">← Kurslarga qaytish</a>
+
+</body>
+</html>

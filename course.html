@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SmartLearn — Kurslar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #27ae60, #000000);
+      color: white;
+    }
+
+    header {
+      background-color: #222;
+      padding: 10px 0 20px;
+    }
+
+    header h1 {
+      color: #4CAF50;
+      text-align: center;
+      margin: 10px 0;
+      font-size: 32px;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      text-align: left;
+      font-size: 24px;
+      margin-bottom: 30px;
+      color: #b6ffb4;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #2ecc71, #000000);
+      color: white;
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.5s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-20px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .card p {
+      flex-grow: 1;
+    }
+
+    a.btn {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      font-size: 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    a.btn:hover {
+      background-color: #0056b3;
+    }
+
+    @media screen and (max-width: 768px) {
+      .card-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SmartLearn</h1>
+    <nav>
+      <ul>
+        <li><a href="courses.html">Bosh sahifa</a></li>
+        <li><a href="about-teacher.html">O‘zim haqimda</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Mavjud kurslar</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>HTML Asoslari</h3>
+        <p>Sayt tuzishni 0 dan o‘rganing.</p>
+        <a href="html-course.html" class="btn">O‘rganish</a>
+      </div>
+      <div class="card">
+        <h3>CSS Dizayn</h3>
+        <p>Veb sahifaga chiroyli ko‘rinish berishni o‘rganing.</p>
+        <a href="css-course.html" class="btn">O‘rganish</a>
+      </div>
+      <div class="card">
+        <h3>JavaScript Kirish</h3>
+        <p>Web sahifalarni jonlantiring.</p>
+        <a href="js-course.html" class="btn">O‘rganish</a>
+      </div>
+      <div class="card">
+        <h3>Python Asoslari</h3>
+        <p>O‘zgaruvchilar, shart operatorlari va sikllar bilan boshlang.</p>
+        <a href="python-basic.html" class="btn">O‘rganish</a>
+      </div>
+      <div class="card">
+        <h3>OOP Python</h3>
+        <p>Object-oriented programming tushunchalarini o‘rganing.</p>
+        <a href="oop-python.html" class="btn">O‘rganish</a>
+      </div>
+      <div class="card">
+        <h3>Ma’lumotlar bilan ishlash</h3>
+        <p>Fayl, JSON, va SQLite bilan ishlash.</p>
+        <a href="data-python.html" class="btn">O‘rganish</a>
+      </div>
+      <div class="card">
+        <h3>Node.js Backend</h3>
+        <p>Serverlar, REST API, Express.js bilan ishlash.</p>
+        <a href="node-backend.html" class="btn">O‘rganish</a>
+      </div>
+      <div class="card">
+        <h3>MongoDB</h3>
+        <p>CRUD operatsiyalar va Mongo bilan ishlash.</p>
+        <a href="mongo.html" class="btn">O‘rganish</a>
+      </div>
+      <div class="card">
+        <h3>Fullstack Web</h3>
+        <p>HTML, CSS, JS, Node, MongoDB to‘liq stack.</p>
+        <a href="fullstack-course.html" class="btn">O‘rganish</a>
+      </div>
+      <div class="card">
+        <h3>React Asoslari</h3>
+        <p>Component, props, state, JSX asoslari.</p>
+        <a href="react-course.html" class="btn">O‘rganish</a>
+      </div>
+      <div class="card">
+        <h3>React Router</h3>
+        <p>SPA ilovalar uchun sahifa almashinuvi.</p>
+        <a href="react-router.html" class="btn">O‘rganish</a>
+      </div>
+      <div class="card">
+        <h3>React + API</h3>
+        <p>API dan ma’lumot olib, real ilova yarating.</p>
+        <a href="react-api.html" class="btn">O‘rganish</a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Qidiruv orqali kelgan query ni asosida filtering
+    window.onload = function () {
+      const params = new URLSearchParams(window.location.search);
+      const search = params.get("q");
+      if (!search) return;
+
+      const query = search.toLowerCase();
+      const cards = document.querySelectorAll(".card");
+      let found = false;
+
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(query)) {
+          card.style.display = "block";
+          found = true;
+        } else {
+          card.style.display = "none";
+        }
+      });
+
+      if (!found) {
+        const container = document.querySelector(".card-container");
+        const message = document.createElement("p");
+        message.textContent = "Hech qanday mos kurs topilmadi.";
+        message.style.color = "white";
+        message.style.marginTop = "20px";
+        container.appendChild(message);
+      }
+    };
+  </script>
+
+</body>
+</html>

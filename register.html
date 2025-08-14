@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ro‘yxatdan o‘tish — SmartLearn</title>
+  <style>
+    body {
+      margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: url('./img/—Pngtree—dynamic\ speed\ lines\ cascade\ on_15285203.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+      
+    }
+
+    .register-container {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .register-container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #b6ffb4;
+    }
+
+    .register-container input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      background: linear-gradient(135deg, #2ecc71, #000000);
+      color: white;
+    }
+
+    .register-container input::placeholder {
+      color: #ccc;
+    }
+
+    .register-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #ffffff;
+      color: #27ae60;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .register-container button:hover {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="register-container">
+    <h2>Ro‘yxatdan o‘tish</h2>
+    <form onsubmit="registerUser(event)">
+      <input type="text" name="name" placeholder="Ismingiz" required />
+      <input type="email" name="email" placeholder="Emailingiz" required />
+      <input type="password" name="password" placeholder="Parolingiz" required />
+      <a href="courses.html"><button type="submit">Ro‘yxatdan o‘tish</button></a>
+    </form>
+  </div>
+
+  <script>
+    function registerUser(e) {
+      e.preventDefault();
+      localStorage.setItem("isRegistered", "true");
+      alert("Tabriklaymiz! Siz muvaffaqiyatli ro'yxatdan o'tdingiz.");
+      window.location.href = "index.html";
+    }
+  </script>
+
+</body>
+</html>

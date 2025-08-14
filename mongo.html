@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MongoDB — SmartLearn</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: linear-gradient(135deg, #000000, #14532d);
+      color: white;
+    }
+
+    h1, h2, h3 {
+      color: #4CAF50;
+    }
+
+    code {
+      background-color: #222;
+      color: #b6ffb4;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    pre {
+      background-color: #111;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    a {
+      color: #6fe56f;
+    }
+
+    hr {
+      margin: 40px 0;
+      border: 1px solid #4CAF50;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 60px;
+    }
+
+    .button {
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #27ae60;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 #4CAF50; }
+      70% { transform: scale(1.05); box-shadow: 0 0 10px 5px #4CAF50; }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 #4CAF50; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>MongoDB Asoslari</h1>
+
+  <p><strong>MongoDB</strong> — bu hujjatga asoslangan NoSQL ma’lumotlar bazasidir. Bu darsda siz CRUD (Create, Read, Update, Delete) operatsiyalarini o‘rganasiz.</p>
+
+  <hr/>
+
+  <h2>1. MongoDB o‘rnatish va ulanish</h2>
+
+  <p><strong>Mongoose</strong> orqali ulanish:</p>
+<pre><code>const mongoose = require("mongoose");
+
+mongoose.connect("mongodb://127.0.0.1:27017/smartlearn", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});</code></pre>
+
+  <hr/>
+
+  <h2>2. Model yaratish</h2>
+<pre><code>const User = mongoose.model("User", {
+  name: String,
+  age: Number
+});</code></pre>
+
+  <hr/>
+
+  <h2>3. Ma’lumot qo‘shish (Create)</h2>
+<pre><code>const newUser = new User({ name: "Ali", age: 25 });
+newUser.save();</code></pre>
+
+  <hr/>
+
+  <h2>4. Ma’lumot o‘qish (Read)</h2>
+<pre><code>User.find().then(data => console.log(data));</code></pre>
+
+  <hr/>
+
+  <h2>5. Ma’lumot yangilash (Update)</h2>
+<pre><code>User.updateOne({ name: "Ali" }, { age: 30 });</code></pre>
+
+  <hr/>
+
+  <h2>6. Ma’lumot o‘chirish (Delete)</h2>
+<pre><code>User.deleteOne({ name: "Ali" });</code></pre>
+
+  <hr/>
+
+  <h2>7. Amaliy Mashq</h2>
+  <ul>
+    <li>Mongoose orqali MongoDB bazasiga ulang</li>
+    <li>Model yarating va CRUD amallarni bajaring</li>
+    <li>Postman orqali test qiling</li>
+  </ul>
+
+  <p>Agar bularni bajargan bo‘lsangiz — siz MongoDB asoslarini o‘rgandingiz! ✅</p>
+
+  <div class="btn-container">
+    <a href="course.html" class="button">← Kurslarga qaytish</a>
+    <a href="fullstack-course.html" class="button">Keyingi darslik →</a>
+  </div>
+
+</body>
+</html>

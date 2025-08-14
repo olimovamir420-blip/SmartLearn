@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JavaScript Kirish — SmartLearn</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: linear-gradient(135deg, #000000, #14532d);
+      color: white;
+    }
+
+    h1, h2, h3 {
+      color: #4CAF50;
+    }
+
+    code {
+      background-color: #222;
+      color: #b6ffb4;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    pre {
+      background-color: #111;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    a {
+      color: #6fe56f;
+    }
+
+    hr {
+      margin: 40px 0;
+      border: 1px solid #4CAF50;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 60px;
+    }
+
+    .button {
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #27ae60;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 #4CAF50; }
+      70% { transform: scale(1.05); box-shadow: 0 0 10px 5px #4CAF50; }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 #4CAF50; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Kirish</h1>
+
+  <p><strong>JavaScript</strong> — bu brauzerda ishlovchi dasturlash tili bo‘lib, web sahifalarni interaktiv va dinamik qilishga imkon beradi.</p>
+
+  <hr/>
+
+  <h2>1. JavaScript-ni ulash</h2>
+  <p>HTML faylga JavaScript quyidagicha ulanadi:</p>
+
+<pre><code>&lt;script&gt;
+  alert("Salom, SmartLearn!");
+&lt;/script&gt;
+</code></pre>
+
+  <hr/>
+
+  <h2>2. O‘zgaruvchilar</h2>
+<pre><code>let ism = "Ali";
+const yosh = 20;
+var manzil = "Buxoro";</code></pre>
+
+  <p><code>let</code> va <code>const</code> — yangi ES6 usullar, <code>var</code> esa eski usul hisoblanadi.</p>
+
+  <hr/>
+
+  <h2>3. Shart operatorlari</h2>
+<pre><code>if (yosh &gt;= 18) {
+  console.log("Voyaga yetgansiz");
+} else {
+  console.log("Yoshsiz");
+}</code></pre>
+
+  <hr/>
+
+  <h2>4. Sikllar</h2>
+  <p>Bir necha marta bir xil kodni bajarish uchun ishlatiladi:</p>
+
+<pre><code>for (let i = 1; i &lt;= 5; i++) {
+  console.log(i);
+}</code></pre>
+
+  <hr/>
+
+  <h2>5. Funksiyalar</h2>
+<pre><code>function salomBer(ism) {
+  console.log("Salom, " + ism);
+}
+salomBer("Ali");</code></pre>
+
+  <hr/>
+
+  <h2>6. DOM bilan ishlash</h2>
+  <p>Sahifadagi elementlar bilan JavaScript yordamida ishlash mumkin:</p>
+
+<pre><code>document.getElementById("demo").innerText = "Yangilandi!";
+</code></pre>
+
+  <hr/>
+
+  <h2>7. Amaliy Mashq</h2>
+  <ul>
+    <li>O‘zgaruvchi e’lon qilib, konsolga chiqarish</li>
+    <li>Shart operatori bilan foydalanuvchi yoshini tekshirish</li>
+    <li>For loop yordamida sonlarni chiqarish</li>
+    <li>DOM elementni JavaScript orqali o‘zgartirish</li>
+  </ul>
+
+  <p>Agar bularni bajargan bo‘lsangiz — JavaScript asoslari sizniki! 🎉</p>
+
+  <div class="btn-container">
+    <a href="course.html" class="button">← Kurslarga qaytish</a>
+    <a href="python-basic.html" class="button">Keyingi darslik →</a>
+  </div>
+
+</body>
+</html>

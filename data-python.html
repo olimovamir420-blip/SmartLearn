@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ma’lumotlar bilan ishlash — SmartLearn</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: linear-gradient(135deg, #000000, #14532d);
+      color: white;
+    }
+
+    h1, h2, h3 {
+      color: #4CAF50;
+    }
+
+    code {
+      background-color: #222;
+      color: #b6ffb4;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    pre {
+      background-color: #111;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    a {
+      color: #6fe56f;
+    }
+
+    hr {
+      margin: 40px 0;
+      border: 1px solid #4CAF50;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 60px;
+    }
+
+    .button {
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #27ae60;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 #4CAF50; }
+      70% { transform: scale(1.05); box-shadow: 0 0 10px 5px #4CAF50; }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 #4CAF50; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Python’da Ma’lumotlar bilan ishlash</h1>
+
+  <p>Bu darslikda siz <strong>fayllar</strong>, <strong>JSON</strong> formatdagi ma’lumotlar, va <strong>SQLite</strong> ma’lumotlar bazalari bilan ishlashni o‘rganasiz.</p>
+
+  <hr/>
+
+  <h2>1. Fayllar bilan ishlash</h2>
+
+  <p>Python’da fayllarni o‘qish va yozish juda oson:</p>
+<pre><code>with open("malumot.txt", "w") as fayl:
+    fayl.write("Salom, bu fayl!")
+
+with open("malumot.txt", "r") as fayl:
+    print(fayl.read())</code></pre>
+
+  <hr/>
+
+  <h2>2. JSON bilan ishlash</h2>
+
+  <p>JSON — bu ko‘p platformalarda ishlatiladigan ma’lumot formati. Python’da `json` moduli yordamida ishlatiladi:</p>
+<pre><code>import json
+
+talaba = {"ism": "Ali", "yosh": 22}
+
+# JSON ga aylantirish
+json_str = json.dumps(talaba)
+
+# Faylga yozish
+with open("talaba.json", "w") as f:
+    json.dump(talaba, f)
+
+# Fayldan o‘qish
+with open("talaba.json", "r") as f:
+    malumot = json.load(f)
+    print(malumot["ism"])</code></pre>
+
+  <hr/>
+
+  <h2>3. SQLite bilan ishlash</h2>
+
+  <p>SQLite — yengil va kuchli ma’lumotlar bazasidir. `sqlite3` moduli bilan ishlatiladi:</p>
+<pre><code>import sqlite3
+
+conn = sqlite3.connect("talabalar.db")
+c = conn.cursor()
+
+# Jadval yaratish
+c.execute("""CREATE TABLE IF NOT EXISTS talaba (
+    id INTEGER PRIMARY KEY,
+    ism TEXT,
+    yosh INTEGER
+)""")
+
+# Ma’lumot qo‘shish
+c.execute("INSERT INTO talaba (ism, yosh) VALUES (?, ?)", ("Ali", 21))
+
+# Ma’lumotlarni o‘qish
+c.execute("SELECT * FROM talaba")
+print(c.fetchall())
+
+conn.commit()
+conn.close()</code></pre>
+
+  <hr/>
+
+  <h2>4. Amaliy Mashq</h2>
+  <ul>
+    <li>Faylga matn yozing va qayta o‘qing</li>
+    <li>JSON formatda ma’lumot yozib, qayta o‘qing</li>
+    <li>SQLite ma’lumotlar bazasiga yozing va o‘qing</li>
+  </ul>
+
+  <p>Agar bularni bajargan bo‘lsangiz — siz Python’da ma’lumotlar bilan ishlashni boshladingiz! 🎉</p>
+
+  <div class="btn-container">
+    <a href="course.html" class="button">← Kurslarga qaytish</a>
+    <a href="node-backend.html" class="button">Keyingi darslik →</a>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OOP Python — SmartLearn</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: linear-gradient(135deg, #000000, #14532d);
+      color: white;
+    }
+
+    h1, h2, h3 {
+      color: #4CAF50;
+    }
+
+    code {
+      background-color: #222;
+      color: #b6ffb4;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    pre {
+      background-color: #111;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    a {
+      color: #6fe56f;
+    }
+
+    hr {
+      margin: 40px 0;
+      border: 1px solid #4CAF50;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 60px;
+    }
+
+    .button {
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #27ae60;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 #4CAF50; }
+      70% { transform: scale(1.05); box-shadow: 0 0 10px 5px #4CAF50; }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 #4CAF50; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Python OOP — Object-Oriented Programming</h1>
+
+  <p><strong>OOP</strong> — bu dasturlash uslubi bo‘lib, u real hayotdagi obyektlar asosida quriladi. Python’da bu sinflar va obyektlar orqali amalga oshiriladi.</p>
+
+  <hr/>
+
+  <h2>1. Sinf (Class) va obyekt (Object)</h2>
+
+<pre><code>class Talaba:
+    def __init__(self, ism, yosh):
+        self.ism = ism
+        self.yosh = yosh
+
+    def tanishtir(self):
+        print(f"Men {self.ism}, yoshim {self.yosh}")
+
+ali = Talaba("Ali", 21)
+ali.tanishtir()</code></pre>
+
+  <hr/>
+
+  <h2>2. Meros olish (Inheritance)</h2>
+
+<pre><code>class Hayvon:
+    def ovoz_ber(self):
+        print("Hayvon ovozi")
+
+class It(Hayvon):
+    def ovoz_ber(self):
+        print("Vov-vov")
+
+dog = It()
+dog.ovoz_ber()</code></pre>
+
+  <hr/>
+
+  <h2>3. Inkapsulyatsiya (Encapsulation)</h2>
+<pre><code>class BankHisob:
+    def __init__(self):
+        self.__balans = 0
+
+    def pul_qosh(self, miqdor):
+        self.__balans += miqdor
+
+    def balansni_korish(self):
+        return self.__balans
+
+hisob = BankHisob()
+hisob.pul_qosh(100)
+print(hisob.balansni_korish())</code></pre>
+
+  <hr/>
+
+  <h2>4. Polimorfizm (Polymorphism)</h2>
+<pre><code>class Qush:
+    def ovoz(self):
+        print("Chir-chir")
+
+class Toy:
+    def ovoz(self):
+        print("Gug-gug")
+
+for hayvon in (Qush(), Toy()):
+    hayvon.ovoz()</code></pre>
+
+  <hr/>
+
+  <h2>5. Amaliy Mashq</h2>
+  <ul>
+    <li>Sinf yaratib, unga atribut va metodlar qo‘shing</li>
+    <li>Merosi bo‘lgan boshqa sinf yozing</li>
+    <li>Inkapsulyatsiya qilish uchun `__` bilan yopiq atribut yarating</li>
+  </ul>
+
+  <p>Agar bu darslarni tushungan bo‘lsangiz — siz OOPning asoslarini egalladingiz! 🎉</p>
+
+  <div class="btn-container">
+    <a href="course.html" class="button">← Kurslarga qaytish</a>
+    <a href="data-python.html" class="button">Keyingi darslik →</a>
+  </div>
+
+</body>
+</html>

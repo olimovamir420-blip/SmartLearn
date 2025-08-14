@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog — SmartLearn</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(-45deg, #000, #14532d, #000, #27ae60);
+      background-size: 400% 400%;
+      animation: bg 15s ease infinite;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    @keyframes bg {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    header h1 {
+      font-size: 36px;
+      color: #4CAF50;
+      margin-bottom: 10px;
+    }
+
+    .blog-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .blog-card {
+      background-color: rgba(0,0,0,0.6);
+      border: 1px solid #4CAF50;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px #4CAF50;
+      transition: transform 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: scale(1.02);
+    }
+
+    .blog-card h3 {
+      color: #b6ffb4;
+      margin-bottom: 10px;
+    }
+
+    .blog-card p {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .blog-card .date {
+      font-size: 12px;
+      color: #aaa;
+      margin-bottom: 10px;
+    }
+
+    .blog-card a {
+      text-decoration: none;
+      color: #27ae60;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📚 Blog Maqolalari</h1>
+    <p>Dasturlash, o‘rganish va ilhom haqida maqolalar</p>
+  </header>
+
+  <section class="blog-container">
+    <div class="blog-card">
+      <h3>HTML ni o‘rganish bo‘yicha 5 maslahat</h3>
+      <p class="date">2025-08-05</p>
+      <p>Yangi boshlovchilar uchun HTML asoslarini o‘rganish yo‘li...</p>
+      <a href="#">Batafsil o‘qish →</a>
+    </div>
+
+    <div class="blog-card">
+      <h3>CSS orqali sahifani bezatish usullari</h3>
+      <p class="date">2025-08-03</p>
+      <p>Sahifangizga zamonaviy ko‘rinish berish uchun foydali maslahatlar.</p>
+      <a href="#">Batafsil o‘qish →</a>
+    </div>
+
+    <div class="blog-card">
+      <h3>JavaScriptda funksiya tushunchasi</h3>
+      <p class="date">2025-08-01</p>
+      <p>Funksiya nima? Qanday chaqiriladi? Misollar orqali tushuntiramiz.</p>
+      <a href="#">Batafsil o‘qish →</a>
+    </div>
+  </section>
+
+  <footer>
+  © 2025 SmartLearn — MirAmir tomonidan yaratilgan.
+</footer>
+
+
+</body>
+</html>
